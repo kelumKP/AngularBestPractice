@@ -116,7 +116,7 @@ pipe : uom conversion.pipe.ts
 - “A Single class or a Module should only have a single responsibility.” (wiki)
 - Other having ‘One Item Per File’, this also has to be considered when adding items in a file 
 
-#### Example:
+###### Example:
 ## Say we have a data service which is used to fetch all the requested data from web API,
 - This has to be broken down to individual services.
 - Each service must have it’s own file. (One Item per file)
@@ -126,15 +126,18 @@ pipe : uom conversion.pipe.ts
 - File name and the class name should be the same. 
     E.g: File Name loading-spinner.component.ts : Class Name LoadingSpinnerComponent
 - Class name should be in ‘Pascal Case’ and should be suffixed with... 
- - Component - E.g.: ItemSupervisionComponent
- - Service - E.g.: InitializationService
- - Directive - E.g.: AccessCheckDirective
- - Pipe - E.g.: UomConversionPipe
+  - Component - E.g.: ItemSupervisionComponent
+  - Service - E.g.: InitializationService
+  - Directive - E.g.: AccessCheckDirective
+  - Pipe - E.g.: UomConversionPipe
 - Constant ,as per style guide, should follow the Camel Case. E.g. courseCatalog but in AL as per Convention 
 COURSE_CATALOG
 - Public property should be in Pascal Case (against the style guide). E.g.: Course
-- Private variable and the method name should be in Camel Case. E.g.: course, getCource(number id) : Course Imports:
+- Private variable and the method name should be in Camel Case. E.g.: course, getCource(number id) : 
+
+Course Imports:
 - First third party imports. 
-- Next Application defined imports followed by a line feed
+- Next Application defined imports followed by a line feed 
 
 ![Getting Started](./photos/Picture1.png)
+
