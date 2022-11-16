@@ -164,4 +164,12 @@ Course Imports:
 
 ![Getting Started](./photos/Picture4.png)
 
-- --
+---
+
+# Using Small Functions
+- Big functions are hard to read because of the complexity
+- If a function is more than 5 to 10 lines, think whether you could break it down.
+
+![Getting Started](./photos/Picture5.png)
+
+![Getting Started](./photos/Picture6.png)
