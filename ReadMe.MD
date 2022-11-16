@@ -1,3 +1,4 @@
+
 # Angular Best Practices
 
 ## Project and folder organization
@@ -141,6 +142,7 @@ Course Imports:
 
 ![Getting Started](./photos/Picture1.png)
 
+
 # Preferring immutability
 - This is a good practice in Javascript. (Not specific to Angular…)
 - This is recommended by Angular.
@@ -163,9 +165,7 @@ Course Imports:
 ![Getting Started](./photos/Picture3.png)
 
 ![Getting Started](./photos/Picture4.png)
-
----
-
+- --
 # Using Small Functions
 - Big functions are hard to read because of the complexity
 - If a function is more than 5 to 10 lines, think whether you could break it down.
@@ -173,3 +173,15 @@ Course Imports:
 ![Getting Started](./photos/Picture5.png)
 
 ![Getting Started](./photos/Picture6.png)
+
+# Reactive Form Validators Custom Validator 1 of 3
+- If a validator is global then it has to be defined in the shared module under validators folder and in a class named CustomValidator
+
+![Getting Started](./photos/Picture7.png)
+
+# Reactive Form Validators - Custom Validator - 2 of 3
+
+- If a validation is only applicable for a specific form then it has to be declared inside that component itself.
+- If a validator is applicable for a feature module then that has to be declared under validators folder of that feature.
+
+![Getting Started](./photos/Picture8.png)
