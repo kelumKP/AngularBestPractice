@@ -141,3 +141,27 @@ Course Imports:
 
 ![Getting Started](./photos/Picture1.png)
 
+# Preferring immutability
+- This is a good practice in Javascript. (Not specific to Angular…)
+- This is recommended by Angular.
+- Basically refers to : not mutating existing Javascript object in memory rather creating new objects.
+- Helps to avoid certain bugs such as, a value is unexpectedly changed from somewhere else in the code
+- Helps in change detection
+
+---
+
+- Object.assign : https://googlechrome.github.io/samples/object-assign-es6/
+
+- The state of Immutability : https://medium.com/dailyjs/the-state-of-immutability-169d2cd11310
+
+- On performance: https://stackoverflow.com/questions/34385243/why-is-immutability-so-important-or-needed-in-javascript
+
+- What is immutability :https://www.sitepoint.com/immutability-javascript/
+
+![Getting Started](./photos/Picture2.png)
+
+![Getting Started](./photos/Picture3.png)
+
+![Getting Started](./photos/Picture4.png)
+
+- --
