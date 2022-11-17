@@ -245,3 +245,85 @@ Course Imports:
   - Inside feature module: ini --/ tst --/ prd
   
 ![Getting Started](./photos/Picture16.png)
+
+# Separating Component, CSS and Template
+- As per the Angular style guide, if the CSS or Template contains more than 3 lines it has to be put in it’s own file
+- Followings are still valid, as it does not violate the LIFT
+
+![Getting Started](./photos/Picture17.png)
+
+# Decorating input and output properties
+
+- There are two ways to declare them
+	- As metadata
+	- Using ‘Input’ and ‘output’ decorator
+- As per style guide the best practice is to use the ‘input’ and ‘output’ decorators as there is only one place to change and
+easy to locate
+
+![Getting Started](./photos/Picture18.png)
+
+# Delegate complex logic to services
+- Also related to Single Responsibility principle
+# Component member sequence
+
+- Properties at the top of the component
+- Members are by default public so no need to mention the keyword public (benefits in package size),
+private members should be declared with the keyword ‘private’
+- Public members have to be declared first then the the private members
+- Constructor should follow next
+- Life cycle hooks should follow next
+- Methods are by default public so no need to mention the keyword public (benefits in package size),
+private methods should be declared with the keyword ‘private’
+- Public methods have to be declared first then the the private members
+- Caution: If the methods which are called inside a template those must be defined as public. 
+**IF NOT THIS WILL WORK IN DEV BUT WILL BREAK IN PRODUCTION MODE.**
+
+# Implementing Lifecycle hook interfaces
+- Method called even without implementing the interface, as per BP always implement the interface
+
+![Getting Started](./photos/Picture19.png)
+
+![Getting Started](./photos/Picture20.png)
+
+![Getting Started](./photos/Picture21.png)
+
+# When to (and not to) create component
+- Even if the component is smaller, it it can be reused then separate the code block into a new component
+- Mostly when it comes to controls, especially ‘input’ don’t try to create own component as it lead to function hiding.
+
+# Angular Services Best Practices
+
+- Marking services as injectable
+- Working with Angular injectors
+# Marking service as injectable
+- Injectable decorator is needed only if the service injects another service
+- Recommended practice is to add the decorator
+even it the service doesn’t inject any other service
+Not Recommended
+- Data retrieval (using API…) must be separated from the component and should be inside a separate service
+
+![Getting Started](./photos/Picture22.png)
+
+# Working with Angular injectable
+
+- If a service is provided in an eagerly loaded module that will be moved to root by Angular
+- If a service is provided in lazy loaded module even if the service is already provided in the root angular will create an
+instance of the service again. No Singleton
+- If a service is to used inapplication wise the provide that in the core module, if a service is only related to
+a feature then provide in the feature module.
+- Even though an eagerly loaded module register the service in the root, create that service in that module
+not in the ‘CoreModule’
+
+![Getting Started](./photos/Picture23.png)
+
+# Angular Performance Best Practices
+
+- Ahead of time compilation and CLI
+- Lazy loading feature module
+- Paying attention to bundle sizes
+- Immutability and onPush change detection
+- Pure and impure pipes
+
+# Ahead of time compilation and CLI
+
+![Getting Started](./photos/Picture24.png)
