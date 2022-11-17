@@ -180,6 +180,7 @@ Course Imports:
 ![Getting Started](./photos/Picture7.png)
 
 # Reactive Form Validators - Custom Validator - 2 of 3
+
 - If a validation is only applicable for a specific form then it has to be declared inside that component itself.
 - If a validator is applicable for a feature module then that has to be declared under validators folder of that feature.
 
@@ -198,3 +199,49 @@ Course Imports:
 - Creating a core module
 - Creating a shared module
 - Creating feature modules
+
+# Angular Module Overview
+![Getting Started](./photos/Picture11.png)
+
+# Recommended Modules
+
+![Getting Started](./photos/Picture12.png)
+
+# Creating Core Module
+- ‘BrowserModule’ should only be imported in the AppModule
+- ‘CommonModule’ is expected by all the module but import is only allowed in ‘CoreModule’ and ‘SharedModule’
+
+![Getting Started](./photos/Picture13.png)
+
+# Creating Shared Module
+- All the shared components, directives, pipes should be defined in this module
+- ‘CommonModule’ should be exported in this module for other modules to use
+
+![Getting Started](./photos/Picture14.png)
+
+# Creating Feature Module
+- All the feature specific components, directives, pipes should be defined in this module
+- ‘SharedModule’ should be imported in this module
+- Components need not to be exported
+
+![Getting Started](./photos/Picture15.png)
+
+# Angular Component Best Practices
+- Prefixing Component selectors
+- Using separate CSS and template files
+- Decorating input and output properties
+- Component member sequence
+- Delegate complex logic to services
+- Implementing lifecycle hook interfaces
+- When to create components
+
+# Prefixing Component Selectors
+
+- First of all, a selector has to be defined only in case of the component is to be used as child
+- Normally 2 to 4 characters, As per TS lint guide line a selector should contains only 3 characters
+- Naming conventions:
+  - Inside core module : cor
+  - Inside Shared module: sha
+  - Inside feature module: ini --/ tst --/ prd
+  
+![Getting Started](./photos/Picture16.png)
