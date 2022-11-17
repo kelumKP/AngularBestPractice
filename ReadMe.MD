@@ -327,3 +327,58 @@ not in the ‘CoreModule’
 # Ahead of time compilation and CLI
 
 ![Getting Started](./photos/Picture24.png)
+
+# Ahead of time compilation Best Practice
+
+- Use Angular CLI
+- Compile before deploying
+
+![Getting Started](./photos/Picture25.png)
+
+# Lazy Loading Feature Module
+
+- Another easy performance gain
+- Unless user click on a feature, no need to download all the modules of the app at once
+- Some users may not even have access to some feature modules
+
+![Getting Started](./photos/Picture26.png)
+
+# Monitoring Bundle Size
+
+- Every new release we may need to pay attention to the bundle size, especially the third party bundle
+
+![Getting Started](./photos/Picture27.png)
+
+- Use source map tool or any other tool to check
+	- npm install -g source map explorer
+	- ng build prod source map
+	- cd dist (move to dist folder)
+	- source map explorer vendor.010c58c8294ceff46d06.dundle.js
+- May need to consider this check during the CI (Continuous integration)
+
+# Monitoring Bundle Size: Con..
+
+![Getting Started](./photos/Picture28.png)
+
+# Immutability and onPush change detection
+
+- Recommendation is not to always use the onPush change detection, enable only in case if any
+considerable performance issue noticed on a component
+![Getting Started](./photos/Picture29.png)
+- Angular’s change detection fires during, all the low level browser events and
+results in reevaluating the properties of the object(s)
+- With the change detection enabled, the angular will only do the comparison with
+object or an array references
+- Fires only when an input reference is changed or an async observable fires an
+event or few other cases.
+-  Fires only when an input reference is changed or an async observable fires an
+event or few other cases.
+![Getting Started](./photos/Picture30.png)
+
+# Pure and Impure Pipe Performance
+- Pipes are pure by default
+![Getting Started](./photos/Picture31.png)
+- Making a pipe as impure increases a performance issues
+![Getting Started](./photos/Picture32.png)
+- Use immutability
+![Getting Started](./photos/Picture33.png)
