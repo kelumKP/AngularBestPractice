@@ -180,8 +180,21 @@ Course Imports:
 ![Getting Started](./photos/Picture7.png)
 
 # Reactive Form Validators - Custom Validator - 2 of 3
-
 - If a validation is only applicable for a specific form then it has to be declared inside that component itself.
 - If a validator is applicable for a feature module then that has to be declared under validators folder of that feature.
 
 ![Getting Started](./photos/Picture8.png)
+
+# Reactive Form ValidatorsCustom Validator 3 of 3
+- If parameters to be passed then use a factory function which returns a validator function
+
+![Getting Started](./photos/Picture9.png)
+
+![Getting Started](./photos/Picture10.png)
+
+# Angular Module Organization
+
+- Angular modules overview
+- Creating a core module
+- Creating a shared module
+- Creating feature modules
