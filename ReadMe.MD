@@ -377,8 +377,13 @@ event or few other cases.
 
 # Pure and Impure Pipe Performance
 - Pipes are pure by default
+
 ![Getting Started](./photos/Picture31.png)
+
 - Making a pipe as impure increases a performance issues
+
 ![Getting Started](./photos/Picture32.png)
+
 - Use immutability
+
 ![Getting Started](./photos/Picture33.png)
